@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='atividade14.css'>
+    <script src='atividade14.js'></script>
+</head>
+<body>
+    <h2>Formulário de Pesquisa</h2>
+    <form action="./" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+
+        <div id="principal" width=200 heigth=200 >
+            <p>Nome:</p>
+            
+            <input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+            <br>
+            <p>E-Mail:</p> 
+
+            <input name="idEmail" type="email" id="idEmail" size="52" maxlength="150">
+            <br>
+            <p>Comentário</p>
+            
+            <textarea name="idComentario" cols="50" rows="8" id="idMensagem" value="" input></textarea>
+            <br>
+            <br>
+            <br>
+            <h1>Pesquisa:</h1>
+            <p>Primeira vez nesta página??</p>
+            <input type="radio" id="r1" name="primeiravez" value="1">
+            <label for="r1">Sim</label>
+            <input type="radio" id="r2" name="primeiravez" value="0">
+            <label for="r2">Não</label>
+
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+
+        </div>
+    </form>
+</body>
+</html>
