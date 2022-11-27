@@ -1,0 +1,405 @@
+*{
+margin: 0;
+padding: 0; 
+box-sizing: border-box;
+font-family: 'josefin sans', sans-serif;
+
+}
+
+
+
+.background{
+ background-image: url(https://img.elo7.com.br/product/600x380/37EEB26/kit-digital-144-png-harry-potter-aquarela-cute-disney.jpg);
+ background-size: cover;
+ background-position: center;
+ height: 100vh;
+ width: 100%;
+
+}
+
+
+h2{
+
+    color: rgb(12, 11, 11);
+    font-size: 75px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.checkbox-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+
+}
+
+.checkbox .trace {
+
+    width: 50px;
+    height: 2px;
+    background-color: #070707;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.checkbox .trace:nth-child(1){
+
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2){
+
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3){
+
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle{
+
+    display: none;
+}
+
+.menu{
+
+    position: fixed;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #5e5555;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+
+   
+}
+
+.menu-itens{
+ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+    
+}
+
+.menu-itens ul{
+
+    list-style-type: none;
+    position: fixed;
+
+}
+
+
+.menu-itens ul li a{
+    color: #381abb;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    font-size: 40px;
+    
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+
+    transform: translate(-45deg);
+   top: 48px;
+}
+
+#toggle:checked + .checkbox{
+
+    background-color: #ffffff;
+    
+}
+
+#toggle:checked ~ .menu{
+
+    box-shadow: 0px 0px 0px 80vmax transparent;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-itens{
+
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-itens li a:hover{
+
+    background-color: rgb(170, 155, 155);
+    border: 2px solid;
+    color: rgb(233, 119, 119);
+    cursor: pointer;
+
+    
+}
+
+
+.main{
+
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50);
+
+}
+
+h4{
+
+    color: rgb(14, 13, 13);
+    letter-spacing: 2px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 0.1rem;
+}
+
+h1{
+    color: rgb(14, 13, 13);
+    margin: 20px 0px 20px;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 0.1rem;
+    
+}
+
+h3{
+  color: rgb(14, 13, 13);
+  font-size: 25px;
+  margin-bottom: 50px;
+  background: #fff;
+    border-radius: 1rem;
+    padding: 0.1rem;
+}
+
+.container-btn form{
+
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+
+.container-btn form input:first-child{
+
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border-radius: 30px;
+    outline: none;
+}
+
+.container-btn form input:last-child{
+
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: black;
+    color: #fff;
+    box-shadow: 0px 0px 15px #fff;
+    right: 6px;
+    top: 6px;
+}
+
+.backgroud-color-sobre{
+    
+ background-image: url(https://3.bp.blogspot.com/-HpF6bfcAMHI/VusRWMsc_oI/AAAAAAAAGvg/tpv7d8IXGnkFjvLCfSFmAyg95YGDiv9aw/w1200-h630-p-k-no-nu/Harry_Potter.jpg);
+ width: 100%;
+ padding: 100px 0px; 
+
+}
+
+.backgroud-color-sobre img {
+
+    width: 430px;
+    height: auto;
+    
+}
+
+.text-sobre{
+    width: 550px;
+
+}
+
+.main-sobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1130px;
+    margin: 0 auto;
+    background-color: rgb(66, 61, 61);
+    
+    
+
+}
+
+.text-sobre h2{
+
+    color: #fff;
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    
+
+    
+}
+
+.text-sobre h5{
+ 
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    
+
+}
+
+.text-sobre p{
+
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 18px;
+    margin-bottom: 45px;
+   
+}
+
+.button{
+    background-color: rgb(250, 245, 245);
+    color: rgb(94, 88, 88);
+    text-transform: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 20px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+.button:hover{
+
+    background-color: rgb(170, 155, 155);
+    border: 2px solid;
+    color: rgb(15, 15, 15);
+    cursor: pointer;
+}
+
+.container-redes{
+    
+
+   background-image: url(https://imagensemoldes.com.br/wp-content/uploads/2020/06/Amigos-Harry-Potter-PNG-1024x594.png);
+   width: 100%;
+   padding: 100px 0px;
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+  
+}
+
+.Title h2{
+    color: rgb(19, 18, 18);
+    font-size: 60px;
+    width: 1100px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #94949469;   
+    border-radius: 5rem;
+
+
+}
+
+.Caixa{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    flex-wrap: wrap;
+}
+
+.Card{
+
+    background-color: rgb(245, 239, 239);
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+ .card h5 {
+    color:  rgb(40, 19, 233) ; 
+    font-size: 23px;
+    margin-bottom:15px ;
+
+}
+
+
+
+.Card img{
+
+        width:100%;
+        height:100%;
+         margin-bottom: 100%;
+        
+    
+}
+
+
+
+
+
